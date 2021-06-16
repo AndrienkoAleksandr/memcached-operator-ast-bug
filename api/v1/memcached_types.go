@@ -17,6 +17,7 @@ limitations under the License.
 package v1
 
 import (
+	"github.com/AndrienkoAleksandr/memcached-operator-ast-bug/api/v1alpha1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )
 
@@ -34,8 +35,7 @@ type MemcachedSpec struct {
 
 // MemcachedStatus defines the observed state of Memcached
 type MemcachedStatus struct {
-	// INSERT ADDITIONAL STATUS FIELD - define observed state of cluster
-	// Important: Run "make" to regenerate code after modifying this file
+	Status v1alpha1.MemcachedStatus `json:"substatus,omitempty"`
 }
 
 //+kubebuilder:object:root=true
